@@ -1,0 +1,141 @@
+/* Genel ayarlar */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(135deg, #71b7e6, #9b59b6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form konteyneri */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover efekti ile neon efekt */
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #00ffab, 0 0 50px #00ffab, 0 0 75px #00ffab;
+}
+
+/* Başlık */
+.container h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+/* Giriş alanları */
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="password"],
+.container input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+/* Giriş alanı üzerine gelince neon efekt */
+.container input[type="text"]:hover,
+.container input[type="email"]:hover,
+.container input[type="password"]:hover,
+.container input[type="number"]:hover,
+.container input[type="text"]:focus,
+.container input[type="email"]:focus,
+.container input[type="password"]:focus,
+.container input[type="number"]:focus {
+    box-shadow: 0 0 15px #00ffab, 0 0 25px #00ffab;
+    outline: none;
+}
+
+/* Buton */
+.container input[type="submit"] {
+    width: 100%;
+    background-color: #9b59b6;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Buton üzerine gelince neon efekti */
+.container input[type="submit"]:hover,
+.container input[type="submit"]:active {
+    background-color: #8e44ad;
+    box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+}
+
+/* Hata ve başarı mesajları */
+.error, .success {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.error {
+    color: #e74c3c;
+}
+.success {
+    color: #2ecc71;
+}
+
+/* OTP formu gizli olacak */
+#otpForm {
+    display: none;
+}
+/* Karanlık Tema Stilleri */
+body.dark-theme {
+    background-image: linear-gradient(135deg, #2c3e50, #34495e); /* Karanlık arka plan */
+    color: white; /* Metin rengi beyaz */
+}
+
+.container.dark-theme {
+    background-color: rgba(44, 62, 80, 0.9); /* Karanlık form arka planı */
+    
+}
+
+.container.dark-theme input[type="text"],
+.container.dark-theme input[type="email"],
+.container.dark-theme input[type="password"],
+.container.dark-theme input[type="number"] {
+    background-color: rgba(52, 73, 94, 0.8); /* Karanlık giriş alanı arka planı */
+    color: white; /* Giriş alanı metin rengi beyaz */
+}
+
+.container.dark-theme input[type="submit"] {
+    background-color: #8e44ad; /* Karanlık tema için buton rengi */
+}
+/* Karanlık Tema için Sign Up Metni Rengi */
+.container.dark-theme #signupPrompt a {
+    color: #00ffab; /* Daha belirgin bir renk ayarlayın */
+}
+
+.container.dark-theme #signupPrompt {
+    color: white; /* Metin rengini beyaz yapın */
+}
+.container.dark-theme #redirectToLogin a {
+    color: #00ffab; /* Daha belirgin bir renk ayarlayın */
+}
+
+.container.dark-theme  #redirectToLogin {
+    color: white; /* Metin rengini beyaz yapın */
+}

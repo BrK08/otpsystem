@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register and Login Page with Neon Effects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="formContainer">
+        <div>
+            <label for="darkThemeToggle">
+                <input type="checkbox" id="darkThemeToggle"> Dark Theme
+            </label>
+        </div>
+        
+        <!-- Kayıt Formu -->
+        <div id="registerSection">
+            <h2>Register</h2>
+            <div id="message" class="error" style="display:none;"></div>
+            <div id="success-message" class="success" style="display:none;"></div>
+
+            <form id="registerForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+
+                <input type="submit" value="Register">
+            </form>
+
+            <p id="redirectToLogin">
+                I have an account. <a href="#" id="loginLink">Login here</a>
+            </p>
+        </div>
+
+        <!-- Giriş Formu -->
+        <div id="loginSection" style="display:none;">
+            <h2>Login</h2>
+            <div id="loginMessage" class="error" style="display:none;"></div>
+            <form id="loginForm">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email" required>
+
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required>
+
+                <input type="submit" value="Login">
+            </form>
+              <div id="signupPrompt">
+        <p>Don't have an account? <a href="#" id="signupLink">Sign Up</a></p>
+    </div>
+        </div>
+
+        <!-- OTP formu -->
+        <form id="otpForm" style="display:none;">
+            <h2>Enter OTP</h2>
+            <label for="otp">OTP Code</label>
+            <input type="number" id="otp" name="otp" placeholder="Enter your OTP" required>
+
+            <input type="submit" value="Submit OTP">
+          
+        </form>
+    </div>
+
+    <!-- EmailJS ve Script.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
